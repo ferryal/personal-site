@@ -1,12 +1,11 @@
 ## Simple Personal Website
 
-Live Demo: http://personal-web-hkl.netlify.com
 
 ## Tech Stack
 
-- ReactJs
+- React JS
 - Redux
-- Styled-components
+
 
 ## How to run this project
 
