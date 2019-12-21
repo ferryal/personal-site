@@ -1,0 +1,152 @@
+html, body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 1366px;
+  width: 100%;
+  padding-top: 66px;
+  z-index: 0;
+  @media (max-width: 425px) {
+    padding-top: 123px;
+  }
+  @media (max-width: 375px) {
+    padding-top: 142px;
+  }
+}
+
+
+.wrapper-notif {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    top: 0;
+    z-index: 2;
+}
+
+.center-notif {
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    padding: 14px 0;
+    width: 100%;
+    max-width: 1366px;
+    }
+
+
+.container-notif {
+    max-width: 720px;
+    display: flex;
+    text-align: center;
+
+    @media (max-width: 425px) {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: start;
+    }
+}
+
+.text-notif {
+    text-align: left;
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+    width: 80%;
+}
+
+
+
+.btn-notif {
+    padding: 2px 12px;
+    white-space: nowrap;
+    background-color: #007bc1;
+    display: flex;
+    border-radius: 3px;
+    margin-left: 25px;
+    cursor: pointer;
+
+    @media (max-width: 425px) {
+        display: inline-block;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+.btn-text-notif {
+    align-self: center;
+    color: #ffffff;
+}
+
+.link-notif {
+    text-decoration: none;
+}
+
+.wrapper-personal {
+    background: #004a75 url(./../img/jumbotron-img.jpg) center center no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 640px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 45px;
+    height: 45px;
+}
+
+.container-personal {
+    max-width: 720px;
+    text-align: center;
+
+    @media (max-width: 425px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.btn-personal {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 15px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+
+.text-personal {
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.skill-personal {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.name-personal {
+    color: #ffffff;
+    font-size: 38px;
+}
+
+/* .btn-contact &:hover {
+    color: #004a75;
+    background-color: #ffffff;
+} */
