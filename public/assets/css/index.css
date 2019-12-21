@@ -10,12 +10,6 @@
   width: 100%;
   padding-top: 66px;
   z-index: 0;
-  @media (max-width: 425px) {
-    padding-top: 123px;
-  }
-  @media (max-width: 375px) {
-    padding-top: 142px;
-  }
 }
 
 
@@ -42,13 +36,6 @@
     max-width: 720px;
     display: flex;
     text-align: center;
-
-    @media (max-width: 425px) {
-        display: inline-block;
-        padding-left: 10px;
-        padding-right: 10px;
-        text-align: start;
-    }
 }
 
 .text-notif {
@@ -68,12 +55,6 @@
     border-radius: 3px;
     margin-left: 25px;
     cursor: pointer;
-
-    @media (max-width: 425px) {
-        display: inline-block;
-        margin-left: 0;
-        margin-top: 15px;
-    }
 }
 
 .btn-text-notif {
@@ -107,11 +88,6 @@
 .container-personal {
     max-width: 720px;
     text-align: center;
-
-    @media (max-width: 425px) {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 }
 
 .btn-personal {
@@ -121,7 +97,6 @@
     margin-top: 20px;
     cursor: pointer;
     border-radius: 3px;
-
 }
 
 .text-personal {
@@ -230,13 +205,6 @@ div .btn-personal:hover {
     max-width: 640px;
     position: relative;
     bottom: -170px;
-
-    @media (max-width: 375px) {
-    bottom: -212px;
-    }
-    @media (max-width: 425px) {
-    bottom: -228px;
-    }
 }
 
 .head-title {
@@ -285,6 +253,16 @@ div .btn-personal:hover {
     cursor: pointer;
 }
 
+/* animation */
+@keyframes disapear-container-animation {
+    0% {
+        padding-top: 66px;
+    }
+
+    100% {
+        padding-top: 0px;
+    }
+}
 
 @keyframes disapear-animation {
     0% {
@@ -293,7 +271,6 @@ div .btn-personal:hover {
 
     100% {
         transform: translate(0, 100%);
-        ;
     }
 }
 
@@ -305,6 +282,26 @@ div .btn-personal:hover {
     100% {
         bottom: 0;
     }
+}
+
+@keyframes disapear-notif-animation {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        transform: translate(0, -100%);
+    }
+}
+
+.disapear-container-animation {
+    animation: disapear-container-animation 1s;
+    animation-fill-mode: forwards;
+}
+
+.disapear-notif-animation {
+    animation: disapear-notif-animation 1s;
+    animation-fill-mode: forwards;
 }
 
 .disapear-animation {
@@ -330,5 +327,73 @@ div .btn-personal:hover {
 @media (max-width: 479px) {
     .container-skills {
         grid-template-columns: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .card-subscription {
+        bottom: -212px;
+    }
+
+    .wrapper {
+        padding-top: 142px;
+    }
+
+    @keyframes disapear-container375-animation {
+        0% {
+            padding-top: 142px;
+        }
+
+        100% {
+            padding-top: 0px;
+        }
+    }
+
+    .disapear-container-animation {
+        animation: disapear-container375-animation 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media (max-width: 425px) {
+    .card-subscription {
+        bottom: -228px;
+    }
+
+    .wrapper {
+        padding-top: 123px;
+    }
+
+    .container-notif {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: start;
+    }
+
+    .btn-notif {
+        display: inline-block;
+        margin-left: 0;
+        margin-top: 15px;
+    }   
+
+    .container-personal {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @keyframes disapear-container425-animation {
+        0% {
+            padding-top: 123px;
+        }
+
+        100% {
+            padding-top: 0px;
+        }
+    }
+
+    .disapear-container-animation {
+        animation: disapear-container425-animation 1s;
+        animation-fill-mode: forwards;
     }
 }
