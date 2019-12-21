@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 class index extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {  };
+		this.state = { };
 	}
 	render() {
+		const { isNotifHidden, handleHideNotif } = this.props;
 		return (
-			<div className="wrapper-notif">
+			<div className={`wrapper-notif ${isNotifHidden !== false ? 'disapear-notif-animation' : ''}`}>
 				<div className="center-notif">
 					<div className="container-notif">
 						<div className="text-notif">
@@ -16,7 +17,7 @@ class index extends Component {
 							<a className="link-notif" href="https://www.cermati.com/pages/privacy-policy">Privacy Policy,</a> and our
 							<a className="link-notif" href="https://www.cermati.com/pages/privacy-policy"> Terms of Service</a>.
 						</div>
-						<div className="btn-notif">
+						<div className="btn-notif" onClick={handleHideNotif}>
 							<div className="btn-text-notif">
 								Got it
 							</div>
