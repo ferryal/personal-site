@@ -1,5 +1,6 @@
 ## Simple Personal Website
 
+https://personal-site-fmfb.netlify.com/
 
 ## Tech Stack
 
@@ -18,10 +19,10 @@
 
 ```
 # Development
-npm i
-npm start
+npm i / yarn install
+npm start / yarn start
 
 # Production
-npm i
-npm build
+npm i / yarn install
+npm build / yarn build
 ```
